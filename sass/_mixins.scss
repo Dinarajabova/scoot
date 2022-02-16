@@ -1,0 +1,35 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+@mixin reset-nav-link {
+    text-decoration: none;
+    color: rgba(147, 156, 170, 1);
+    font-family: "Space Mono";
+}
+
+@mixin intro-title {
+    font-family: "Space Mono";
+    font-size: 56px;
+    line-height: 56px;
+    color: white;
+}
+
+@mixin small-title {
+    font-family: "Space Mono";
+    font-size: 24px;
+    line-height: 28px;
+    color: rgba(73, 85, 103, 1);
+}
+
+@mixin medium-title {
+    font-family: "Space Mono";
+    font-size: 48px;
+    line-height: 48px;
+    color: rgba(73, 85, 103, 1);
+    letter-spacing: -2px;
+}
+

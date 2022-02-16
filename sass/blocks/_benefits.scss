@@ -1,0 +1,183 @@
+.benefits {
+    overflow: hidden;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.benefits__container {
+    max-width: 1106px;
+    padding-top: 66px;
+    padding-bottom: 395px;
+}
+.benefits__list { 
+   list-style: none;   
+}
+.benefits__item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 160px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    &--girl {
+        position: relative;
+        &::after {
+            background-image: url("../img/pointer-left.svg");
+            display: block;
+            content: '';
+            width: 740px;
+            height: 150px;
+            position: absolute;
+            top: 295px;
+            right: -185px;
+        }
+        &::before {
+            display: block;
+            content: ('');
+            width: 445px;
+            height: 445px;
+            background-color: rgba(229, 236, 244, 1);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            right: -500px;
+            top: 0;
+        }
+    }
+
+    &--city {
+        position: relative;
+        &::after {
+            background-image: url("../img/pointer-right.svg");
+            display: block;
+            content: '';
+            width: 740px;
+            height: 150px;
+            position: absolute;
+            background-repeat: no-repeat;
+            top: 0;
+            left: -255px;
+        }
+        &::before {
+            display: block;
+            content: ('');
+            width: 445px;
+            height: 445px;
+            background-color: rgba(229, 236, 244, 1);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            left: -500px;
+            top: 0;
+        }
+    }
+    &--cash {
+        position: relative;
+        &::after {
+            background-image: url("../img/pointer-left.svg");
+            display: block;
+            content: '';
+            width: 740px;
+            height: 150px;
+            position: absolute;
+            background-repeat: no-repeat;
+            top: 70px;
+            right: -50%;
+        }
+        &::before {
+            display: block;
+            content: ('');
+            width: 445px;
+            height: 445px;
+            background-color: rgba(229, 236, 244, 1);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            right: -500px;
+            top: 0;
+        }
+    }
+}
+.benefits__item-title {
+    @include medium-title;
+}
+.benefits__item-description {
+    color: rgba(147, 156, 170, 1);
+    margin: 24px 0 40px;
+}
+.benefits__item-div {
+    width: 445px;
+}
+.benefits__item-img {
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: $tablet) {
+    .benefits__container {
+        max-width: 768px;
+        padding-bottom: 104px;
+    }
+
+    .benefits__item {
+        display: block;
+        text-align: center;
+        width: 573px;
+        margin: 0 auto 128px;
+    }
+
+    .benefits__item-div {
+        width: 573px;
+        margin: 56px auto 0;
+    }
+    
+}
+
+@media only screen and (max-width: $mobile) {
+    .benefits__container {
+        max-width: 375px;
+    }
+    .benefits__item-div {
+        width: 311px;
+    }
+
+    .benefits__item-title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .benefits__item {
+        width: 311px;
+
+        &--girl {
+            &::after {
+                top: 170px;
+                right: -450px;
+            }
+            &::before {
+                display: none;
+            }
+        }
+        &--city {
+            &::before {
+                display: none;
+            }
+        }
+        &--cash {
+            &::before {
+                display: none;
+            }
+            &::after {
+                top: 0;
+                right: -550px;
+            }
+        }
+    }
+    .benefits__item-img {
+        width: 311px;
+        height: 311px;
+    }
+}

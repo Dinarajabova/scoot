@@ -1,0 +1,18 @@
+.main-link {
+    padding: 14px 39px;
+    background-color: rgba(252, 183, 43, 1);
+    text-decoration: none;
+    color: white;
+    font-family: "Space Mono";
+    text-transform: capitalize;
+    margin-left: auto;
+    display: inline-block;
+   
+    
+    &:hover {
+        border: 3px solid #FCB72B;
+        background-color: transparent;
+        color: #FCB72B;
+        padding: 11px 36px;
+    }
+}

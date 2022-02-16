@@ -1,0 +1,192 @@
+.instruction {
+    overflow: hidden;
+}
+.instruction__container {
+    max-width: 1106px;
+    padding-top: 160px;
+    padding-bottom: 200px;
+}
+
+.instruction__list {
+    @include reset-list;
+
+}
+.instruction__item {
+    
+    margin-right: 30px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.instruction__item-title {
+    @include small-title;
+    margin-bottom: 27px;
+}
+.instruction__item-description {
+    width: 350px;
+    color: rgba(147, 156, 170, 1);
+}
+
+.instruction__hand { 
+    &::after {
+        background: url("../img/hand.svg");
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: 1;             
+        width: 34px;
+        height: 48px;   
+        left: calc(50% - 17px);
+        top: calc(50% - 24px);
+        background-repeat: no-repeat;
+    }
+}
+
+.instruction__scooter {
+    &::after {
+        background: url("../img/scooter.svg");
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: 1;             
+        width: 42px;
+        height: 32px;   
+        left: calc(50% - 21px);
+        top: calc(50% - 16px);
+        background-repeat: no-repeat;
+    }
+
+}
+
+.instruction__rider {   
+    &::after {
+        background: url("../img/rider.svg");
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: 1;             
+        width: 40px;
+        height: 40px;   
+        left: calc(50% - 20px);
+        top: calc(50% - 20px);
+        background-repeat: no-repeat;
+    }
+}
+
+.instruction__span {
+    width: 96px;
+    height: 96px;
+    background-color: rgba(252, 183, 43, 1);
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    position: relative;
+    &::before {
+        display: block;
+        content: ('');
+        width: 300px;
+        height: 5px;
+        border: 5px solid #E5ECF4;
+        background-color: #E5ECF4;
+        position: absolute;
+        right: 90%;
+        top: 45px;
+        z-index: -1;
+    }
+}
+
+
+@media only screen and (max-width: $tablet) {
+    .instruction__container {
+        max-width: 768px;
+        padding-top: 122px;
+    }
+    
+    .instruction__list {
+        flex-direction: column;
+        width: 573px;
+        margin: 0 auto;
+    }
+    .instruction__item {
+        display: flex;
+        margin: 0 0 40px 0;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    }
+    .instruction__item-description {
+        width: 398px;
+    }
+    
+    .instruction__span {
+        margin-right: 79px;
+        &::before {
+            display: block;
+            content: ('');
+            width: 5px;
+            height: 160px;
+            border: 5px solid #E5ECF4;
+            background-color: #E5ECF4;
+            position: absolute;
+            right: 43px;
+            top: -100%;
+            z-index: -1;
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .instruction__container {
+        max-width: 375px;
+    }
+
+    .instruction__item {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 48px;
+    }
+    .instruction__list {
+        width: 311px;
+        text-align: center;
+    }
+    .instruction__item-description {
+        width: 311px;
+    }
+    .instruction__span {
+        margin: 0 0 24px 0;
+        width: 56px;
+        height: 56px;
+        &::before {
+            display: none; 
+        }
+    }
+    .instruction__hand {
+        &::after {              
+            width: 20px;
+            height: 28px;   
+            left: 18px;
+            top: 15px;
+            background-size: cover;
+        }
+    }
+    .instruction__scooter {
+        &::after {              
+            width: 24px;
+            height: 18px;   
+            left: 16px;
+            top: 18px;
+            background-size: cover;
+        }
+    
+    }
+    
+    .instruction__rider {   
+        &::after {
+            width: 23px;
+            height: 23px;   
+            left: 16px;
+            top: 16px;
+            background-size: cover;
+        }
+    }
+}
