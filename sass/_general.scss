@@ -11,6 +11,11 @@ body {
     line-height: 25px;
     margin-top: 120px;
 }
+@media only screen and (max-width: $mobile) {
+    body {
+        margin-top: 96px;
+    }
+}
 
 .visually-hidden {
     position: absolute;

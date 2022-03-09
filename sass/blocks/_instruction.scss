@@ -9,6 +9,18 @@
 
 .instruction__list {
     @include reset-list;
+    position: relative;
+    &::before {
+        display: block;
+        content: ('');
+        border: 1px solid #E5ECF4;
+        height: 16px;
+        width: 973px;
+        position: absolute;
+        background-color: #E5ECF4;
+        top: 40px;
+        left: -165px;
+    }
 
 }
 .instruction__item {
@@ -16,6 +28,15 @@
     margin-right: 30px;
     &:last-child{
         margin-right: 0;
+    }
+    &::before {
+        display: block;
+        content: ('');
+        width: 96px;
+        height: 96px;
+        background-color: rgba(252, 183, 43, 1);
+        border-radius: 50%;
+        margin-bottom: 40px
     }
 }
 .instruction__item-title {
@@ -28,72 +49,50 @@
 }
 
 .instruction__hand { 
+    position: relative;
+    
     &::after {
-        background: url("../img/hand.svg");
+        background-image: url("../../img/hand.svg");
         display: block;
-        content: '';
-        position: absolute;
-        z-index: 1;             
         width: 34px;
-        height: 48px;   
-        left: calc(50% - 17px);
-        top: calc(50% - 24px);
-        background-repeat: no-repeat;
+        height: 47px;
+        content: ('');
+        position: absolute;
+        top: 24px;
+        left: 32px;
+        z-index: 2;
     }
 }
 
 .instruction__scooter {
+    position: relative;
     &::after {
-        background: url("../img/scooter.svg");
+        background-image: url("../../img/scooter.svg");
         display: block;
-        content: '';
-        position: absolute;
-        z-index: 1;             
+        content: ('');
         width: 42px;
-        height: 32px;   
-        left: calc(50% - 21px);
-        top: calc(50% - 16px);
-        background-repeat: no-repeat;
+        height: 31px;
+        position: absolute;
+        top: 32px;
+        left: 27px;
     }
-
 }
 
 .instruction__rider {   
+    position: relative;
     &::after {
-        background: url("../img/rider.svg");
+        background-image: url("../../img/rider.svg");
         display: block;
-        content: '';
-        position: absolute;
-        z-index: 1;             
+        content: ('');
         width: 40px;
-        height: 40px;   
-        left: calc(50% - 20px);
-        top: calc(50% - 20px);
-        background-repeat: no-repeat;
+        height: 40px;
+        position: absolute;
+        top: 28px;
+        left: 28px;
     }
 }
 
-.instruction__span {
-    width: 96px;
-    height: 96px;
-    background-color: rgba(252, 183, 43, 1);
-    display: block;
-    border-radius: 50%;
-    margin-bottom: 40px;
-    position: relative;
-    &::before {
-        display: block;
-        content: ('');
-        width: 300px;
-        height: 5px;
-        border: 5px solid #E5ECF4;
-        background-color: #E5ECF4;
-        position: absolute;
-        right: 90%;
-        top: 45px;
-        z-index: -1;
-    }
-}
+
 
 
 @media only screen and (max-width: $tablet) {
